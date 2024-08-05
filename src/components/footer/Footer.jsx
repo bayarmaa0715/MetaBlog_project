@@ -14,7 +14,7 @@ const menuEl = [
 
 const Footer = () => {
   return (
-    <div className="grid gap-10 border-t-[1px] border-gray-300 pt-16 px-5 max-sm:px-3">
+    <div className="grid gap-10 border-t-[1px] border-gray-300 pt-16 md:px-[15rem] px-5 bg-gray-100">
       <div className="flex justify-between gap-10  max-sm:grid max-sm:gap-5 max-sm:justify-center text-gray-500">
         <div className="grid flex-wrap w-[20rem] gap-4">
           <h1>About</h1>
@@ -53,10 +53,10 @@ const Footer = () => {
           </a>
         </div>
       </div>
-      <div className=" flex justify-between items-center border-t-[1px] border-gray-300  py-7 text-gray-500">
+      <div className=" flex justify-between items-center border-t-[1px] border-gray-300  py-7 text-gray-500 max-sm:grid max-sm:gap-4 max-sm:justify-center">
         <div className="w-[9.8rem]">
           {" "}
-          <img src="/images/logo2.png" alt="" />
+          <img src="/images/logo3.png" alt="" />
         </div>
         <div className="flex gap-10">
           <p>Terms of use</p>

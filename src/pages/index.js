@@ -1,12 +1,14 @@
+import BlogPost from "@/components/blogPost/BlogPost";
 import Header from "@/components/header/header";
 import HeroSection from "@/components/herosection/HeroSection";
 import Trending from "@/components/trend/Trending";
 
 export default function Home() {
   return (
-    <main className="">
+    <main className="md:px-[15rem] px-5 grid  gap-20">
       <HeroSection />
       <Trending />
+      <BlogPost />
     </main>
   );
 }
