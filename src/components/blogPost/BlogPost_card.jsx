@@ -83,7 +83,6 @@ const BlogPost_card = () => {
                 {blogOb.title}
               </span>
               <p className=" flex flex-wrap my-4 text-2xl font-semibold">
-                {" "}
                 {blogOb.summary}
               </p>
               <p className="text-gray-500">August 20, 2022</p>

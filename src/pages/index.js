@@ -5,7 +5,7 @@ import Trending from "@/components/trend/Trending";
 
 export default function Home() {
   return (
-    <main className="md:px-[15rem] px-5 grid  gap-20">
+    <main className="md:px-[240px] px-5 grid  gap-20 mb-20">
       <HeroSection />
       <Trending />
       <BlogPost />

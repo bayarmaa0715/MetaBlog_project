@@ -7,7 +7,7 @@ const menuEl = [
 const Menu = () => {
   return (
     <div>
-      <ul className="flex items-center gap-10">
+      <ul className="flex items-center gap-10 font-bold">
         {menuEl.map((menuElObject) => {
           return (
             <li>
