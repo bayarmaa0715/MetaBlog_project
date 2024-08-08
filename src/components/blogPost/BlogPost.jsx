@@ -12,10 +12,10 @@ const blogMenu = [
 
 const BlogPost = () => {
   return (
-    <div className="flex flex-col gap-8">
+    <div className="flex flex-col gap-8 ">
       <h1 className="font-semibold text-2xl">All Blog Post</h1>
-      <div className=" flex justify-between text-gray-600 font-medium">
-        <ul className=" flex gap-5">
+      <div className=" md:flex md:justify-between text-gray-600 font-medium">
+        <ul className=" md:flex md:gap-5 grid grid-cols-3">
           {blogMenu.map((menuObject) => {
             return <a href="">{menuObject.menuName}</a>;
           })}
