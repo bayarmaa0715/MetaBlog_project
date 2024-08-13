@@ -1,6 +1,7 @@
 import React, { useContext, useState } from "react";
 import BlogPost_card from "./BlogPost_card";
 import { SearchContext } from "@/provider/SearchProvider";
+import Loader from "../Loader";
 const blogMenu = [
   { menuName: "All", href: "" },
   { menuName: "Design", href: "" },
@@ -11,7 +12,7 @@ const blogMenu = [
 ];
 
 const BlogPost = () => {
-  const { searchValue } = useContext(SearchContext);
+  const { searchValue, isLoading } = useContext(SearchContext);
 
   return (
     <div className="flex flex-col gap-8 ">
@@ -25,6 +26,7 @@ const BlogPost = () => {
         <p>View all</p>
       </div>
       <p className="bg-slate-200 p-2 rounded-lg">Хайлт утга:{searchValue}</p>
+
       <BlogPost_card />
       <div className="flex justify-center mt-20">
         <button className="bg-gray-200 px-4 py-1 rounded-lg">Learn More</button>

@@ -6,9 +6,11 @@ import { CiSearch } from "react-icons/ci";
 
 const Header = () => {
   const { setSearchValue } = useContext(SearchContext);
-  const handleChange = (text) => {
-    setSearchValue(text.target.value);
+
+  const handleChange = (e) => {
+    setSearchValue(e.target.value);
   };
+
   return (
     <>
       <div className="flex items-center justify-between  gap-16 py-8 md:px-[15rem] px-5 ">

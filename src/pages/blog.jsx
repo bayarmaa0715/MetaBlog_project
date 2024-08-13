@@ -1,4 +1,6 @@
 import BlogPost_card from "@/components/blogPost/BlogPost_card";
+import { SearchContext } from "@/provider/SearchProvider";
+import { useContext } from "react";
 
 export default function Blog() {
   return (
