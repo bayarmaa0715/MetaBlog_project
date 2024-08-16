@@ -1,31 +1,6 @@
 import React from "react";
-const trendEl = [
-  {
-    title: "Technology",
-    summary:
-      "The Impact of Technology on the Workplace: How Technology is Changing",
-    img: "/images/a1.png",
-  },
-  {
-    title: "Technology",
-    summary:
-      "The Impact of Technology on the Workplace: How Technology is Changing",
-    img: "/images/a2.png",
-  },
-  {
-    title: "Technology",
-    summary:
-      "The Impact of Technology on the Workplace: How Technology is Changing",
-    img: "/images/a3.png",
-  },
-  {
-    title: "Technology",
-    summary:
-      "The Impact of Technology on the Workplace: How Technology is Changing",
-    img: "/images/a4.png",
-  },
-];
-const TrendingCard = () => {
+
+const TrendingCard = ({ trendEl }) => {
   return (
     <div className="flex gap-5 justify-between max-sm:grid">
       {trendEl.map((trendElObject) => {
@@ -33,7 +8,7 @@ const TrendingCard = () => {
           <div className="relative w-[289px] h-[320px] rounded-lg">
             <div className="size-full relative">
               <img
-                src={trendElObject.img}
+                src={trendElObject.social_image}
                 alt=""
                 className="object-cover size-full rounded-lg relative "
               />
@@ -42,10 +17,10 @@ const TrendingCard = () => {
 
             <div className="absolute bottom-7 left-7 right-7 text-white text-base ">
               <b className="bg-blue-600 rounded-lg py-1 px-4 font-medium ">
-                {trendElObject.title}
+                {trendElObject.type_of}
               </b>
               <p className=" font-bold mt-2 text-justify ">
-                {trendElObject.summary}
+                {trendElObject.title}
               </p>
             </div>
           </div>

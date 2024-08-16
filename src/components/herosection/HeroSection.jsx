@@ -1,33 +1,48 @@
-import React from "react";
+import React, { useState } from "react";
 import { CiSquareChevLeft } from "react-icons/ci";
 import { CiSquareChevRight } from "react-icons/ci";
+import HeroCard from "./HeroCard";
+
+const heroSlider = [
+  "/images/a1.png",
+  "/images/a2.png",
+  "/images/a3.png",
+  "/images/a4.png",
+];
 
 const HeroSection = () => {
+  const [currentIndex, setCurrentIndex] = useState(0);
   return (
     <div className=" realtive  ">
-      <div className=" relative ">
-        <div className="relative h-[600px]">
-          <img
-            src="/images/Logo2.jpeg"
-            alt=""
-            className="rounded-lg size-full object-cover "
-          />
-        </div>
-        <div className="bg-white absolute bottom-3 left-3 p-10 w-1/2 rounded-lg">
-          <span className="bg-blue-600 px-4 py-1 rounded-lg  ">Technology</span>
-          <p className="text-4xl flex flex-wrap my-4 ">
-            {" "}
-            Grid system for better Design User Interface
-          </p>
-          <p className="text-gray-500">August 20, 2022</p>
-        </div>
+      <div className="overflow-hidden">
+        <HeroCard heroSlider={heroSlider} currentIndex={currentIndex} />
       </div>
+
       <div className="text-4xl flex justify-end text-gray-500 font-normal ">
-        <button>
+        <button
+          onClick={() => {
+            // return setCurrentIndex(currentIndex - 1);
+            console.log("hero slider len left click", heroSlider.length);
+            console.log("currenr index len left click", currentIndex);
+            if (currentIndex <= 0) {
+              return setCurrentIndex(0);
+            } else return setCurrentIndex(currentIndex - 1);
+          }}
+        >
           <CiSquareChevLeft />
         </button>
-        <button>
-          {" "}
+        <button
+          onClick={() => {
+            console.log("hero slider len right click", heroSlider.length);
+            console.log("currenr index len right click", currentIndex);
+            // return setCurrentIndex(currentIndex + 1);
+            if (heroSlider.length <= currentIndex + 1) {
+              return setCurrentIndex(heroSlider.length - 1);
+            } else if (heroSlider.length > currentIndex) {
+              return setCurrentIndex(currentIndex + 1);
+            }
+          }}
+        >
           <CiSquareChevRight />
         </button>
       </div>
