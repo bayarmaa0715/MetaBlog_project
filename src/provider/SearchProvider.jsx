@@ -24,7 +24,7 @@ const SearchProvider = ({ children }) => {
   };
 
   useEffect(() => {
-    getArticles(9, 12);
+    getArticles(9, 3);
   }, []);
 
   const getTrendArticles = async (pageNum, perPage, topDayNum) => {
@@ -44,7 +44,7 @@ const SearchProvider = ({ children }) => {
   };
 
   useEffect(() => {
-    getTrendArticles(1, 4, 5);
+    getTrendArticles(2, 4, 5);
   }, []);
 
   return (

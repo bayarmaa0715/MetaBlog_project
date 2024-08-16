@@ -46,7 +46,7 @@ const BlogPost_card = () => {
                     {blogOb.type_of}
                   </span>
                   <p className=" flex flex-wrap my-4 text-2xl font-semibold">
-                    {blogOb.title}
+                    {blogOb.title.substring(0, 50)}
                   </p>
 
                   <div className="flex items-center gap-20 text-gray-500 text-sm">

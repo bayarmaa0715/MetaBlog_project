@@ -1,14 +1,12 @@
-import React from "react";
-
 const HeroCard = ({ heroSlider, currentIndex }) => {
   return (
     <div className="w-full h-full flex">
-      {heroSlider.map((img, i) => {
+      {heroSlider.map((slide, i) => {
         return (
           <div className={`relative  min-w-full `}>
             <div className="relative h-[600px]">
               <img
-                src={`${heroSlider[currentIndex]}`}
+                src={`${heroSlider[currentIndex].social_image}`}
                 alt=""
                 className="rounded-lg size-full object-cover "
               />

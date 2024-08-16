@@ -20,7 +20,7 @@ const TrendingCard = ({ trendEl }) => {
                 {trendElObject.type_of}
               </b>
               <p className=" font-bold mt-2 text-justify ">
-                {trendElObject.title}
+                {trendElObject.title.substring(0, 50)}
               </p>
             </div>
           </div>
