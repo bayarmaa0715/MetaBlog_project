@@ -1,9 +1,11 @@
+import Link from "next/link";
+
 const HeroCard = ({ heroSlider, currentIndex }) => {
   return (
     <div className="w-full h-full flex">
       {heroSlider.map((slide, i) => {
         return (
-          <div className={`relative  min-w-full `}>
+          <Link href={`/${slide.id}`} className={`relative  min-w-full `}>
             <div className="relative h-[600px]">
               <img
                 src={`${heroSlider[currentIndex].social_image}`}
@@ -21,7 +23,7 @@ const HeroCard = ({ heroSlider, currentIndex }) => {
               </p>
               <p className="text-gray-500">August 20, 2022</p>
             </div>
-          </div>
+          </Link>
         );
       })}
     </div>

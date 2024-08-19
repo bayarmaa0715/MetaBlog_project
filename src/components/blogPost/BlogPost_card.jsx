@@ -33,7 +33,7 @@ const BlogPost_card = () => {
         findArticles.map((blogOb) => {
           return (
             <Link href={`/${blogOb.id}`}>
-              <div className="w-[392px] h-[476px] p-4 flex flex-col gap-4 border border-gray-200 rounded-lg">
+              <div className="w-[392px] h-[476px] p-4 flex flex-col gap-4 border border-gray-200 rounded-lg hover:scale-105 duration-300">
                 <div className="w-[360px] h-[240px] ">
                   <img
                     src={blogOb.social_image}

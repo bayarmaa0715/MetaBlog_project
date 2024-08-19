@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 const TrendingCard = ({ trendEl }) => {
@@ -5,7 +6,10 @@ const TrendingCard = ({ trendEl }) => {
     <div className="flex gap-5 justify-between max-sm:grid">
       {trendEl.map((trendElObject) => {
         return (
-          <div className="relative w-[289px] h-[320px] rounded-lg">
+          <Link
+            href={`/${trendElObject.id}`}
+            className="relative w-[289px] h-[320px] rounded-lg hover:scale-105 duration-300"
+          >
             <div className="size-full relative">
               <img
                 src={trendElObject.social_image}
@@ -23,7 +27,7 @@ const TrendingCard = ({ trendEl }) => {
                 {trendElObject.title.substring(0, 50)}
               </p>
             </div>
-          </div>
+          </Link>
         );
       })}
     </div>
