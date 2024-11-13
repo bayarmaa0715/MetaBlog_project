@@ -11,14 +11,7 @@ const Trending = () => {
     <div className="flex flex-col gap-5">
       <h1 className="font-bold text-2xl">Trending</h1>
       <TrendingCard trendEl={trendArticles} />
-      <div className="text-4xl flex justify-center text-gray-500 font-normal gap-96  mt-9">
-        <button>
-          <RiAlignTop />
-        </button>
-        <button>
-          <RiAlignBottom />
-        </button>
-      </div>
+      <div className="text-4xl flex justify-center text-gray-500 font-normal gap-96  mt-9"></div>
     </div>
   );
 };

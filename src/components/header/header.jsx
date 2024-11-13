@@ -13,7 +13,7 @@ const Header = () => {
 
   return (
     <>
-      <div className="flex items-center justify-between  gap-16 py-8 md:px-[15rem] px-5 ">
+      <div className="flex items-center justify-between  gap-16 py-8 md:px-[5rem] px-5 ">
         <img src="/images/Logo.png" alt="" className="w-[9.8rem]" />
         <Menu />
         <div className="flex items-center justify-end relative">

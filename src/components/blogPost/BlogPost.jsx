@@ -12,7 +12,7 @@ const blogMenu = [
 ];
 
 const BlogPost = () => {
-  const { searchValue, isLoading } = useContext(SearchContext);
+  const { perPage, setPerPage } = useContext(SearchContext);
 
   return (
     <div className="flex flex-col gap-8 ">
@@ -25,11 +25,16 @@ const BlogPost = () => {
         </ul>
         <p>View all</p>
       </div>
-      <p className="bg-slate-200 p-2 rounded-lg">Хайлт утга:{searchValue}</p>
+      {/* <p className="bg-slate-200 p-2 rounded-lg">Хайлт утга:{searchValue}</p> */}
 
       <BlogPost_card />
       <div className="flex justify-center mt-20">
-        <button className="bg-gray-200 px-4 py-1 rounded-lg">Learn More</button>
+        <button
+          className="bg-gray-200 px-4 py-1 rounded-lg"
+          onClick={() => setPerPage(perPage + 3)}
+        >
+          Learn More
+        </button>
       </div>
     </div>
   );

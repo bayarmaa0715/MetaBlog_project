@@ -1,11 +1,13 @@
 import { createContext, useEffect, useState } from "react";
 
 export const SearchContext = createContext(null);
+
 const SearchProvider = ({ children }) => {
   const [searchValue, setSearchValue] = useState("");
   const [articles, setArticles] = useState([]);
   const [trendArticles, setTrendArticles] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
+  const [perPage, setPerPage] = useState(6);
 
   const getArticles = async (pageNum, perPage) => {
     try {
@@ -24,8 +26,8 @@ const SearchProvider = ({ children }) => {
   };
 
   useEffect(() => {
-    getArticles(9, 3);
-  }, []);
+    getArticles(9, perPage);
+  }, [perPage]);
 
   const getTrendArticles = async (pageNum, perPage, topDayNum) => {
     try {
@@ -49,7 +51,14 @@ const SearchProvider = ({ children }) => {
 
   return (
     <SearchContext.Provider
-      value={{ searchValue, setSearchValue, articles, trendArticles }}
+      value={{
+        searchValue,
+        setSearchValue,
+        articles,
+        trendArticles,
+        perPage,
+        setPerPage,
+      }}
     >
       {children}
     </SearchContext.Provider>
